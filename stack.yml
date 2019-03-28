@@ -26,7 +26,6 @@ services:
     image: nextcloud:fpm-alpine
     volumes:
       - nextcloud:/var/www/html
-      - ./apps:/var/www/html/custom_apps
       - ./config:/var/www/html/config
       - ./data:/var/www/html/data
       - ./php.ini:/usr/local/etc/php/php.ini:ro
