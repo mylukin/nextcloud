@@ -10,3 +10,6 @@ git clone https://github.com/mylukin/nextcloud.git
 cd nextcloud
 make
 ```
+
+## Visit
+http://nextcloud_host:8080/
