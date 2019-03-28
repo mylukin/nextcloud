@@ -12,4 +12,4 @@ make
 ```
 
 ## Visit
-http://nextcloud_host:8443/
+http://nextcloud_host:8080/
