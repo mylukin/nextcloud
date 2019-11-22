@@ -28,6 +28,7 @@ services:
       - nextcloud:/var/www/html
       - ./config:/var/www/html/config
       - ./data:/var/www/html/data
+      - /data:/data
       - ./php.ini:/usr/local/etc/php/php.ini:ro
     restart: always
     depends_on:
