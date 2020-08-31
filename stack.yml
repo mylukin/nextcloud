@@ -12,6 +12,8 @@ services:
     image: mariadb
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
+    ports:
+      - 3306:3306
     volumes:
       - ./mysql:/var/lib/mysql
     environment:
@@ -23,7 +25,11 @@ services:
       - nextcloud
 
   app:
-    image: nextcloud:fpm-alpine
+    image: mycloud:latest
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      target: mycloud
     volumes:
       - nextcloud:/var/www/html
       - ./config:/var/www/html/config
