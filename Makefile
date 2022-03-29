@@ -7,5 +7,5 @@ stop:
 restart: stop run
 
 bash:
-	docker exec -u www-data -it $$(docker ps |grep -E 'nextcloud\:[0-9]+\-fpm\-alpine' | awk '{print $$1}') sh
+	docker exec -u www-data -it $$(docker ps |grep 'mycloud:latest' | awk '{print $$1}') sh
 
